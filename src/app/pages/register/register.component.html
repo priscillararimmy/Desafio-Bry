@@ -1,0 +1,35 @@
+<app-default-register-layout
+title="Seja Bem-vindo(a)! Crie uma conta."
+primaryBtnText="Criar uma conta"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!registerForm.valid"
+>
+
+<form  [formGroup]="registerForm">
+  <app-input
+  formControlName="name"
+  inputName="name"
+  type="text"
+  label="Nome"
+  >
+  <img src="/assets/perfil.png"/>
+  </app-input>
+  <app-input
+  formControlName="cpf"
+  inputName="cpf"
+  type="text"
+  label="CPF"
+  >
+  <img src="/assets/cpf.png"/>
+  </app-input>
+  <!-- <app-input
+  formControlName="cpf"
+  inputName="cpf"
+  type="text"
+  label="Enviar foto"
+  >
+  <img src="/assets/galeria.png"/>
+  </app-input> -->
+</form>
+</app-default-register-layout>
